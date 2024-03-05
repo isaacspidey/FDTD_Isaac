@@ -32,7 +32,7 @@ hy = np.zeros(ke)
 kc = int(ke / 2)
 t0 = 40
 spread = 12
-nsteps = 41
+nsteps = 100
 
 
 
@@ -44,8 +44,8 @@ for time_step in range(1, nsteps + 1):
         ex[k] = ex[k] + 0.5 * (hy[k - 1] - hy[k])
 
 # Put a Gaussian pulse in the middle (Source ex)
-    #pulse = exp(-0.5 * ((t0 - time_step) / spread) ** 2)
-    #ex[kc] = pulse
+    pulse = exp(-0.5 * ((t0 - time_step) / spread) ** 2)
+    ex[kc] = pulse
 
 #______________________Apartado 1_________________________
         
@@ -66,12 +66,12 @@ for time_step in range(1, nsteps + 1):
 #______________________Apartado 3_________________________        
 
 # Put a Gaussian pulse at kc-1 (Source ex)
-    pulse_minus = exp(-0.5 * ((t0 - time_step) / spread) ** 2)
-    hy[kc-1] = pulse_minus
+    #pulse_minus = exp(-0.5 * ((t0 - time_step) / spread) ** 2)
+    #hy[kc-1] = pulse_minus
 
 # Put a Gaussian pulse at kc
-    pulse_plus = exp(-0.5 * ((t0 - time_step) / spread) ** 2)
-    hy[kc] = -pulse_plus
+    #pulse_plus = exp(-0.5 * ((t0 - time_step) / spread) ** 2)
+    #hy[kc] = -pulse_plus
 
 
 # Calculate the Hy field
