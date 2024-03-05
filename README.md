@@ -1,2 +1,2 @@
-# FDTD_2D
+# FDTD
 Repositorio de Isaac para el puesto en UGR
