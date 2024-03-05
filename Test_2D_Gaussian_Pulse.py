@@ -12,7 +12,7 @@ dz = np.zeros((ie, je))
 hx = np.zeros((ie, je))
 hy = np.zeros((ie, je))
 ddx = 0.01 # Cell size
-dt = ddx / 6e8 # Time step size
+dt = ddx / 6e8 # Time step size #CREO QUE ESTO NO SE USA?
 
 # Create Dielectric Profile
 epsz = 8.854e-12
@@ -20,7 +20,7 @@ epsz = 8.854e-12
 # Pulse Parameters
 t0 = 20
 spread = 6
-gaz = np.ones((ie, je))
+gaz = np.ones((ie, je)) #épsilon???
 nsteps = 50
 
 # Dictionary to keep track of desired points for plotting
