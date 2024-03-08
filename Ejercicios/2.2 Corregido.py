@@ -104,13 +104,13 @@ for time_step in range(1, nsteps + 1):
                 ** 2)
                 phase_in[m] = atan2(imag_in[m], real_in[m])
 
-            for k in range(ke):
-                amp[m, k] = (1 / amp_in[m]) * sqrt(
-                (real_pt[m, k]) ** 2 + (imag_pt[m, k])
-                ** 2)
-                phase[m, k] = atan2(imag_pt[m, k],
-                real_pt[m, k]) \
-                - phase_in[m]
+                for k in range(ke):
+                    amp[m, k] = (1 / amp_in[m]) * sqrt(
+                    (real_pt[m, k]) ** 2 + (imag_pt[m, k])
+                    ** 2)
+                    phase[m, k] = atan2(imag_pt[m, k],
+                    real_pt[m, k]) \
+                    - phase_in[m]
 
         plotting_point['ex'] = np.copy(ex)
         plotting_point['amp'] = np.copy(amp)
@@ -147,6 +147,7 @@ def plot_amp(data, ga, freq, label):
     plt.plot(-(ga - 1) / 0.75, 'k--',linewidth=0.75) # The math on gb is just for scaling
     plt.xlabel('{}'.format(label))
     return
+
 
 # Plot the E field at each of the time steps saved earlier
 for subplot_num, plotting_point in enumerate(plotting_points):
