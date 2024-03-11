@@ -43,33 +43,33 @@ for time_step in range(1, nsteps + 1):
     for k in range(1, ke):
         ex[k] = ex[k] + 0.5 * (hy[k - 1] - hy[k])
 
-# Put a Gaussian pulse in the middle (Source ex)
+    # Put a Gaussian pulse in the middle (Source ex)
     pulse = exp(-0.5 * ((t0 - time_step) / spread) ** 2)
     ex[kc] = pulse
 
 #______________________Apartado 1_________________________
         
-# Put a Gaussian pulse at kc-20 (Source ex)
+    # Put a Gaussian pulse at kc-20 (Source ex)
     #pulse_minus = exp(-0.5 * ((t0 - time_step) / spread) ** 2)
     #ex[kc-20] = pulse_minus
 
-# Put a Gaussian pulse at kc+20 (Source ex)
+    # Put a Gaussian pulse at kc+20 (Source ex)
     #pulse_plus = exp(-0.5 * ((t0 - time_step) / spread) ** 2)
     #ex[kc+20] = pulse_plus
         
 #______________________Apartado 2_________________________
         
-# Put a Gaussian pulse in kc (Source hy)
+    # Put a Gaussian pulse in kc (Source hy)
     #pulse = exp(-0.5 * ((t0 - time_step) / spread) ** 2)
     #hy[kc] = pulse
         
 #______________________Apartado 3_________________________        
 
-# Put a Gaussian pulse at kc-1 (Source ex)
+    # Put a Gaussian pulse at kc-1 (Source ex)
     #pulse_minus = exp(-0.5 * ((t0 - time_step) / spread) ** 2)
     #hy[kc-1] = pulse_minus
 
-# Put a Gaussian pulse at kc
+    # Put a Gaussian pulse at kc
     #pulse_plus = exp(-0.5 * ((t0 - time_step) / spread) ** 2)
     #hy[kc] = -pulse_plus
 

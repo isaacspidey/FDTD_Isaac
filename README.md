@@ -1,2 +1,2 @@
 # FDTD
-Repositorio de Isaac para el puesto en UGR
+Isaac's conformal FDTD implementation repository

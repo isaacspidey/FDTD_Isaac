@@ -2,6 +2,7 @@ import numpy as np
 from math import exp
 from matplotlib import pyplot as plt
 import mpl_toolkits.mplot3d.axes3d
+import Source.algebra_methods as am
 
 ie = 60
 je = 60
